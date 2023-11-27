@@ -11,11 +11,11 @@ class DescendingOrderTest {
 
     @ParameterizedTest
     @CsvSource({
-            "54421,42145",
-            "654321,145263",
-            "987654321,123456789"
+            "42145,54421",
+            "145263,654321",
+            "123456789,987654321"
     })
-    void sortDesc(int expected, int input) {
+    void sortDesc(int input, int expected) {
         int result = descendingOrder.sortDesc(input);
         assertEquals(expected, result);
     }
